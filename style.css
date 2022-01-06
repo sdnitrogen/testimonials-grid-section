@@ -1,0 +1,135 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=Poppins:wght@200;400;600&display=swap");
+
+/*==================== VARIABLES CSS ====================*/
+:root {
+    /*========== Colors ==========*/
+    /* HSL color mode */
+    --primary-moderate-violet: hsl(263, 55%, 52%);
+    --primary-very-dark-grayish-blue: hsl(217, 19%, 35%);
+    --primary-very-dark-blackish-blue: hsl(219, 29%, 14%);
+    --primary-white: hsl(0, 0%, 100%);
+    --neutral-light-grayish-blue: hsl(210, 46%, 95%);
+    --neutral-light-gray: hsl(0, 0%, 81%);
+
+    /*========== Font and typography ==========*/
+    --body-font: "Barlow Semi Condensed", sans-serif;
+
+    /*========== Font size ==========*/
+    --normal-font-size: 13px;
+
+    /*========== Font weight ==========*/
+    --font-medium: 500;
+    --font-semi-bold: 600;
+
+    --fs-300: 0.6875rem;
+    --fs-400: 0.8125rem;
+    --fs-500: 1.25rem;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h2,
+p {
+    margin: 0;
+}
+
+body {
+    padding: 2rem;
+    display: grid;
+    place-content: center;
+    font-family: var(--body-font);
+    font-weight: var(--font-medium);
+    background-color: var(--neutral-light-grayish-blue);
+}
+
+h2 {
+    font-weight: var(--font-semi-bold);
+}
+
+.testimonial {
+    margin: 1rem;
+    font-size: var(--normal-font-size);
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 2.5rem 3.75rem 3rem -3rem hsl(var(
+                    --primary-very-dark-blackish-blue
+                ) / 0.25);
+}
+
+.quote {
+    background-image: url("./images/bg-pattern-quotation.svg");
+    background-repeat: no-repeat;
+    background-position: top 0% right 10%;
+}
+
+img {
+    width: 1.75rem;
+    border-radius: 50%;
+}
+
+.bordered__image {
+    border: 2px solid #a775f1;
+}
+
+.bio {
+    display: flex;
+    gap: 1rem;
+}
+
+.bio__title {
+    font-size: 0.8125rem;
+    line-height: 1;
+}
+
+.bio__subtitle {
+    font-size: 0.6875rem;
+    margin-top: 1px;
+    opacity: 0.5;
+}
+
+.desc__summary {
+    margin: 0.75rem auto;
+    font-size: 1.25rem;
+    line-height: 1.2;
+}
+
+.desc__details {
+    opacity: 0.7;
+}
+
+.bg__violet {
+    background-color: var(--primary-moderate-violet);
+}
+
+.bg__gray {
+    background-color: var(--primary-very-dark-grayish-blue);
+}
+
+.bg__white {
+    background-color: var(--primary-white);
+}
+
+.bg__dark-blue {
+    background-color: var(--primary-very-dark-blackish-blue);
+}
+
+.txt__white {
+    color: var(--primary-white);
+}
+
+.txt__gray {
+    color: var(--primary-very-dark-grayish-blue);
+}
+
+a {
+    text-decoration: none;
+}
+
+footer {
+    text-align: center;
+    margin-top: 100px;
+}
