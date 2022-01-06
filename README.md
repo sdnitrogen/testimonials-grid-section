@@ -47,18 +47,7 @@ Users should be able to:
 
 ### What I learned
 
-Used CSS Flexbox for both the container of the cards and the content of the cards. At first, for the top borders on the cards, I used border-top, but quickly realized that using border-radius on top of that would curve the colors as well which was not expected in the challenge, so I used this neat little trick to create a line on top of the cards:
-
-```css
-.card::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 5px;
-}
-```
+Used CSS Grid for the body as well the testimonial section and placed each testimonial articles in their specific grids according to the responsive layouts. I didn't use grid-template-areas for this solution but that is another fun way to implement grids for responsive layouts which I'll explore in the upcoming challenges.
 
 ### Continued development
 

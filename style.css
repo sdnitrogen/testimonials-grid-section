@@ -10,6 +10,7 @@
     --primary-white: hsl(0, 0%, 100%);
     --neutral-light-grayish-blue: hsl(210, 46%, 95%);
     --neutral-light-gray: hsl(0, 0%, 81%);
+    --primary-box-shadow: hsl(217 19% 35% / 0.25);
 
     /*========== Font and typography ==========*/
     --body-font: "Barlow Semi Condensed", sans-serif;
@@ -38,26 +39,30 @@ p {
 }
 
 body {
-    padding: 2rem;
+    min-height: 100vh;
     display: grid;
     place-content: center;
+    padding: 2rem;
     font-family: var(--body-font);
     font-weight: var(--font-medium);
     background-color: var(--neutral-light-grayish-blue);
 }
 
-h2 {
-    font-weight: var(--font-semi-bold);
+.testimonial__section {
+    display: grid;
+    gap: 1.5rem;
 }
 
 .testimonial {
-    margin: 1rem;
     font-size: var(--normal-font-size);
     padding: 2rem;
     border-radius: 0.5rem;
-    box-shadow: 2.5rem 3.75rem 3rem -3rem hsl(var(
-                    --primary-very-dark-blackish-blue
-                ) / 0.25);
+    box-shadow: 2.5rem 3.75rem 3rem -3rem var(--primary-box-shadow);
+    transition: all 0.3s ease-in-out;
+}
+
+.testimonial:hover {
+    transform: translateY(-3px);
 }
 
 .quote {
@@ -92,12 +97,13 @@ img {
 }
 
 .desc__summary {
-    margin: 0.75rem auto;
+    margin: 0.75rem 0;
     font-size: 1.25rem;
-    line-height: 1.2;
+    font-weight: var(--font-semi-bold);
 }
 
 .desc__details {
+    line-height: 1.3;
     opacity: 0.7;
 }
 
@@ -131,5 +137,39 @@ a {
 
 footer {
     text-align: center;
-    margin-top: 100px;
+    margin-top: 30px;
+}
+
+/*==================== TABLET ====================*/
+@media screen and (min-width: 668px) {
+    .grid-col-span-2 {
+        grid-column: span 2;
+    }
+    .testimonial__section {
+        max-width: 600px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .testimonial:nth-child(5) {
+        grid-column-start: 2;
+        /* grid-row-start: 1;
+        grid-row-end: span 2; */
+        grid-row: 2 / 4;
+    }
+}
+
+/*==================== DESKTOP ====================*/
+@media screen and (min-width: 1200px) {
+    .grid-col-span-2 {
+        grid-column: span 2;
+    }
+    .testimonial__section {
+        max-width: 1098px;
+        grid-template-columns: repeat(4, 1fr);
+    }
+    .testimonial:nth-child(5) {
+        grid-column-start: 4;
+        /* grid-row-start: 1;
+        grid-row-end: span 2; */
+        grid-row: 1 / 3;
+    }
 }
