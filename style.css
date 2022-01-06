@@ -50,7 +50,7 @@ body {
 
 .testimonial__section {
     display: grid;
-    gap: 1.5rem;
+    gap: 2rem;
 }
 
 .testimonial {
@@ -68,7 +68,7 @@ body {
 .quote {
     background-image: url("./images/bg-pattern-quotation.svg");
     background-repeat: no-repeat;
-    background-position: top 0% right 10%;
+    background-position: top 0% right 18%;
 }
 
 img {
